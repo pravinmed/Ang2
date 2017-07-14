@@ -1,3 +1,79 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+ <div class="container-fluid ">
+  <div class="row " [ngStyle]="{'background-color': '#597489', 'border':'2px solid black',  'font-size': '24px'}" >
+      <div class ="col-xs-3 col-md-3 " style="border:2px solid black" style="background-color: #8EEF16" >
+      
+    
+        <h2> 
+            <img [src]="patientPic" height=170 width=300>
+         
+          </h2>
+        
+      </div>
+      <div class ="col-xs-7 col-md-7 "  style="border:2px solid black; background-color: #597489" >
+       
+         <label [ngStyle]="{'color': 'white', 'font-size': '24px', 'font-weight': 'bold'}"> 
+        <input type="checkbox" name="isActive" [(ngModel)]="patientChecked" (change)="onPatientClicked()" >
+          <span [innerText] = "patientCheckString"></span> 
+        </label>
+        
+         <h4> First :  <span style="background-color:bisque" [innerText] = "first"> </span></h4>
+         <h3> Last :  <span style="background-color:bisque" [innerText] = "last"> </span></h3>
+         <h3> ID :  <span style="background-color:bisque" [innerText] = "patientId"> </span></h3>
+         <h3 *ngIf="planLabel"> Label : <span style="background-color:bisque" [innerText] = "planLabel"> </span></h3>
+         <h3 *ngIf="fraction"> Fraction  : <span style="background-color:bisque" [innerText] = "fraction"> </span></h3>
+         <h4>  DOB :  <span [innerText] = "dob"> </span></h4>
+       </div>
+       <div class ="col-xs-2 col-md-2"   style="border:2px solid black" >
+          <h2> Time : </h2>
+         <h2> <span [innerText] = "timeNow"> </span></h2>
+       </div>
+    </div>
+ 
+   <div class="row" [ngStyle]="{'background-color': '#597489', 'border':'2px solid black',  'font-size': '24px'}"  >
+      <div class="col-xs-5 col-md-5" style="border:2px solid black">
+         
+         <button md-raised-button class="material-cust-medium-button">Activity Notes </button>
+         <button md-raised-button class="material-cust-medium-button">Setup Notes </button>
+         
+           <div>
+        <h3><span [innerText] = "setupNotes"> </span>
+        </h3>
+        </div>
+        
+       </div>
+     <div class="col-xs-5 col-md-5"   style="border:2px solid black">
+         <button md-button class="material-cust-medium-button">Setup Photo 1 </button>
+         <button md-button class="material-cust-medium-button">Setup Photo 2 </button>
+         <hr style="background-color: #597489">
+          
+         <img [src]="imgSrc" height=300 width=500>
+      </div>
+      <div class="col-xs-2 col-md-2"  >
+        <h4><b> <u> Sub System Indicator </u></b> </h4>
+      </div>
+   </div>
+
+  <div class="row"  style="background-color: #597489">
+    <div class="col-xs-5 col-md-5" style="border:2px solid black"  ><h3><b> <u>Accessory</u></b> </h3> <br>Bolus  </div>
+     <div class="col-xs-5 col-md-5" style="border:2px solid black">
+        <h3><b> <u>Patient Orientation </u></b></h3> 
+           <img [src]="patOrientation" height=100 width=100>
+       </div>
+      <div class="col-xs-2 col-md-2" style="border:2px solid black" style="background-color: #597489 ">
+        <h4><b> <u>Couch Positions(cm)</u></b> </h4>
+     
+         <div *ngIf="couchInfo" >
+            <ul>
+             <li *ngFor="let item of couchList">
+               <h4> {{item}} </h4>
+             </li>
+          </ul>
+         </div>
+       </div>
+    </div>
+  </div>
+  </div>
+ 
+ 
+

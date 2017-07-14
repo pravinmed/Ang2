@@ -1,0 +1,101 @@
+<div>
+<div class="container"
+     fxLayout
+     fxFlexFill
+     fxLayout.xs="column"
+     fxLayoutAlign="center stretch"
+     fxLayoutGap="10px"
+     fxLayoutGap.xs="0">
+  <div class="item item-1" style="background-color: orange" fxFlex="80%">
+    <div style="background-color: gray">
+   
+     <h2> Patient Details   <span [innerText] = "patientInfo"> </span></h2>
+     <hr>
+     <h2>  DOB : </h2>
+    </div>
+  <div class="container"
+     fxLayout
+     fxFlexFill
+     fxLayout.xs="column"
+     fxLayoutAlign="center stretch"
+     fxLayoutGap="100px"
+     fxLayoutGap.xs="0" style="background-color: gray">
+     <div class="item item-4"   fsFlex="50%" fxFlexOffset.xs="20">
+        <img [src]="imgSrc" height=300 width=500>
+        <hr>
+        <button md-button>Activity Notes </button>
+          <span [innerText] = "messageFromSer" ></span> 4 begin here 
+         
+       </div>
+     <div class="item item-5"  fsFlex="50%"  fxFlex="400px">Item 5 starts here </div>
+  </div>
+
+ <div class="container"
+     fxLayout
+     fxFlexFill
+     fxLayout="row"
+     fxLayoutAlign="center stretch"
+     fxLayoutGap="60px"
+     fxLayoutGap.xs="0" style="background-color: gray">
+  <div class="item item-6" fxFlex="50%" fxFlexOffset="10px" >ksdfjkjf skf Item 6</div>
+  <div class="item item-7" fsFlex="50%" >Item 7 ends here </div>
+</div>
+
+</div>
+ 
+<div class="item item-2" fxFlex="20%" fxFlexOffset="20px">
+ <div class="container"
+     fxLayout
+     
+     fxLayout.xs="column"
+     fxLayoutAlign="left"
+     fxLayoutGap="11px"
+     fxLayoutGap.xs="0"  style="background-color: red">
+
+         <div class="item item-8"  fxFlexOffset="10px" ><h1> Date </h1> Item 8 </div>
+ </div>
+    <div class="container"
+      style="background-color: green" 
+     fxLayout
+     fxFlexFill
+     fxLayout.xs="column"
+     fxLayoutAlign="top"
+    fxLayoutGap="200px"
+     fxLayoutGap="100px"
+    >
+
+
+      <div class="item item-9" style="background-color: orange"  fsFlex="60%" fxFlexFill > Item 9 </div>
+    </div>
+    
+
+    <div class="container"
+      style="background-color: green" 
+     fxLayout
+     fxFlexFill
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+    fxLayoutGap="101px"
+     fxLayoutGap="300px"
+    >
+
+
+      <div class="item item-10" style="background-color: brown"    fxLayoutWrap="wrap" fsFlex="30%"  >
+        <div *ngIf="couchInfo" >
+           <p [innerText] = "couchInfo"></p> 
+         </div>
+        </div>
+    </div>
+
+
+   </div>
+ </div>
+
+
+
+
+ 
+</div>
+ 
+ 
+
